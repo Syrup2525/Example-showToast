@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="showToast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ky-11-y6U">
+                                <rect key="frame" x="142" y="432.5" width="130" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Toast and segue"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anv-Mk-Yp4">
+                                <rect key="frame" x="132" y="62" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Anv-Mk-Yp4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3qv-z3-ggu"/>
+                            <constraint firstItem="4Ky-11-y6U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RPT-56-hgA"/>
+                            <constraint firstItem="4Ky-11-y6U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cEQ-f1-9Zh"/>
+                            <constraint firstItem="Anv-Mk-Yp4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="cns-8j-9CG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btToastAndSegue" destination="4Ky-11-y6U" id="19S-e1-nRb"/>
+                        <segue destination="3od-JD-70U" kind="show" identifier="SecondSegue" id="Ind-2g-E4r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="v08-VQ-6wF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="3od-JD-70U" customClass="SecondViewController" customModule="showToast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rzf-Cb-Vyf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-ec-iiS">
+                                <rect key="frame" x="137" y="432.5" width="140" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Toast and dismiss"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second ViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWq-QW-IKK">
+                                <rect key="frame" x="119.5" y="62" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z4L-19-qkG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xfj-ec-iiS" firstAttribute="centerY" secondItem="Rzf-Cb-Vyf" secondAttribute="centerY" id="LAP-eR-nFs"/>
+                            <constraint firstItem="xfj-ec-iiS" firstAttribute="centerX" secondItem="Rzf-Cb-Vyf" secondAttribute="centerX" id="cNA-XI-WDu"/>
+                            <constraint firstItem="GWq-QW-IKK" firstAttribute="top" secondItem="z4L-19-qkG" secondAttribute="top" constant="18" id="kMD-sh-HJQ"/>
+                            <constraint firstItem="GWq-QW-IKK" firstAttribute="centerX" secondItem="Rzf-Cb-Vyf" secondAttribute="centerX" id="wDE-J7-qDd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="It7-aD-Wqa"/>
+                    <connections>
+                        <outlet property="btToastAndDismiss" destination="xfj-ec-iiS" id="1wg-z1-iqS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q29-jL-tu3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
